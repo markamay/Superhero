@@ -30,3 +30,16 @@ body {
   margin: 0 auto;
 }
 
+.header {
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.header h2 {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  font-style: italic;
+  font-size: 1em;
+}
