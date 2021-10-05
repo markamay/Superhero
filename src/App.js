@@ -1,7 +1,9 @@
+import Header from "./components/Header";
+
 function App() {
   return (
     <div class="container main-content">
-      <h1>Superheroes</h1>
+      <Header />
     </div>
   );
 }
