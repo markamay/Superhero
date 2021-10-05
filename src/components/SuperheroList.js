@@ -4,7 +4,7 @@ const SuperheroList = ({ heroes }) => {
     return (
         <div>
             {heroes.map(hero => 
-               <SuperheroCard hero={hero} /> 
+               <SuperheroCard key={hero.id} hero={hero} /> 
             )}
         </div>
     )

@@ -21,7 +21,7 @@ function App() {
   }
 
   return (
-    <div class="container main-content">
+    <div className="container main-content">
       <Header />
       <SuperheroList heroes={heroes} />
     </div>
