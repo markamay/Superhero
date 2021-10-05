@@ -64,3 +64,7 @@ body {
   font-style: italic;
   font-size: .75em;
 }
+
+.full-details {
+  width: 100%;
+}
