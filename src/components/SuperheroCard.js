@@ -1,4 +1,14 @@
+import { useState } from "react";
+import SuperheroFullDetails from "./SuperheroFullDetails";
+import SuperheroSmallDetails from "./SuperheroSmallDetails";
+
 const SuperheroCard = ({ hero }) => {
+    const [showFullDetails, setShowFullDetails] = useState(false)
+    const toggleDetails = () => {
+        setShowFullDetails(!showFullDetails)
+    }
+
+
     const hero_alignment = hero.biography.alignment;
     let alignment_color;
     if (hero_alignment === 'good') {
@@ -11,12 +21,11 @@ const SuperheroCard = ({ hero }) => {
 
     return (
         <div className="superhero-card-border" style={{backgroundColor: alignment_color}}>
-            <div className="superhero-card">
-                <img src={hero.images.xs} alt={`${hero.name} thumbnail`}/>
-                <h3>{hero.name}</h3>
-                <p class="sub-title">
-                {hero.biography.fullName ? `(${hero.biography.fullName})` : ""}
-                </p>
+            <div className="superhero-card" onClick={toggleDetails}>
+                {showFullDetails ?
+                <SuperheroFullDetails hero={hero} /> :
+                <SuperheroSmallDetails hero={hero} /> 
+                }
             </div>
         </div>
     )
