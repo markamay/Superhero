@@ -53,6 +53,13 @@ body {
   border: 1px solid black;
 }
 
+.superhero-card-border {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
 .sub-title {
   font-style: italic;
   font-size: .75em;
