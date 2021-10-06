@@ -132,3 +132,8 @@ input {
   padding: 5px;
   text-align: center;
 }
+
+table {
+  margin: 2px;
+  box-shadow: black 1px 1px 1px;
+}
