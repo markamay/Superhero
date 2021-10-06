@@ -1,11 +1,14 @@
+import NoHeroesFound from "./NoHeroesFound";
 import SuperheroCard from "./SuperheroCard";
 
 const SuperheroList = ({ heroes }) => {
   return (
     <div>
-      {heroes.map((hero) => (
-        <SuperheroCard key={hero.id} hero={hero} />
-      ))}
+      {heroes.length ? (
+        heroes.map((hero) => <SuperheroCard key={hero.id} hero={hero} />)
+      ) : (
+        <NoHeroesFound />
+      )}
     </div>
   );
 };
