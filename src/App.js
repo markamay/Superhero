@@ -28,6 +28,7 @@ const App = () => {
     setSearchTerm(e.target.value);
   };
 
+  //determines which heroes are displayed
   const getFilteredHeroes = () => {
     //no search term, return all heroes
     if (!searchTerm.trim()) {
@@ -63,7 +64,7 @@ const App = () => {
         type="text"
         value={searchTerm}
         onChange={modifySearchTerm}
-        placeholder="Search for a hero"
+        placeholder="Search for a hero (either by name or by good/bad affiliation)"
       />
       <SuperheroList heroes={getFilteredHeroes()} />
       <Footer />
