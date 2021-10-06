@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Filter from "./components/Filter";
 import Footer from "./components/Footer";
 
 import Header from "./components/Header";
@@ -60,12 +61,7 @@ const App = () => {
   return (
     <div className="container main-content">
       <Header />
-      <input
-        type="text"
-        value={searchTerm}
-        onChange={modifySearchTerm}
-        placeholder="Search for a hero (either by name or by good/bad affiliation)"
-      />
+      <Filter modifySearchTerm={modifySearchTerm} searchTerm={searchTerm} />
       <SuperheroList heroes={getFilteredHeroes()} />
       <Footer />
     </div>
