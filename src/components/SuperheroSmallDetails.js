@@ -10,5 +10,4 @@ const SuperheroSmallDetails = ({ hero }) => {
   );
 };
 
-let p = 5
 export default SuperheroSmallDetails;
