@@ -12,10 +12,13 @@ const FullFilterForm = ({ setHeroFilterFunction }) => {
   return (
     <div className="full-filter-form">
       <label for="affiliation">Affiliation:</label>
-      <select name="affiliation" id="affiliation" onChange={modifyFilter}>
-        <option value="any" selected>
-          Any
-        </option>
+      <select
+        defaultValue="any"
+        name="affiliation"
+        id="affiliation"
+        onChange={modifyFilter}
+      >
+        <option value="any">Any</option>
         <option value="good">Good</option>
         <option value="bad">Bad</option>
         <option value="neutral">Neutral</option>

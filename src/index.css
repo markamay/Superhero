@@ -146,3 +146,29 @@ table {
   margin: 2px;
   box-shadow: black 1px 1px 1px;
 }
+
+.filter-form {
+  width: 100%;
+  justify-content: center;
+}
+
+.filter-button {
+  display: block;
+  width: 85%;
+  margin: 0.5em auto;
+  padding: 0.1em;
+}
+
+.filter-button:hover {
+  cursor: pointer;
+}
+
+.full-filter-form {
+  background-color: #eeeeee;
+  box-shadow: black 5px 5px 7px;
+  padding: 5px;
+}
+
+label {
+  padding: 3px;
+}
