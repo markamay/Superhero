@@ -2,15 +2,18 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #222831;
 }
 
 body {
-  background-color: rgb(40, 96, 136);
+  background-color: #eeeeee;
 }
 
 .main-content {
-  background-color: rgb(255, 235, 0);
+  background-color: #393e46;
+  box-shadow: black 5px 5px 7px;
 }
 
 .container {
@@ -18,7 +21,7 @@ body {
   margin: 30px auto;
   overflow: auto;
   min-height: 300px;
-  border: 4px solid black;
+  border: 1px solid black;
   padding: 30px;
   border-radius: 5px;
 }
@@ -29,9 +32,10 @@ body {
 }
 
 .header {
-  border: 2px solid black;
+  border: 1px solid black;
   border-radius: 5px;
-  background-color: white;
+  background-color: #eeeeee;
+  box-shadow: black 5px 5px 7px;
 }
 
 .header h2 {
@@ -45,12 +49,13 @@ body {
 .superhero-card-border {
   margin-top: 10px;
   margin-bottom: 10px;
-  border: 2px solid black;
+  border: 1px solid black;
   border-radius: 5px;
+  box-shadow: black 5px 5px 7px;
 }
 
 .superhero-card {
-  background-color: white;
+  background-color: #eeeeee;
   margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
@@ -62,7 +67,7 @@ body {
   height: 3.25em;
 }
 
-.small-details h2{
+.small-details h2 {
   display: inline;
 }
 
@@ -82,7 +87,7 @@ body {
 
 .sub-title {
   font-style: italic;
-  font-size: .75em;
+  font-size: 0.75em;
 }
 
 .sub-details {
@@ -105,7 +110,6 @@ td {
 }
 
 input {
-  border: 1px solid black;
   border-radius: 5px;
   margin-top: 1em;
   width: 100%;
