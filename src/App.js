@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Footer from "./components/Footer";
 
 import Header from "./components/Header";
 import SuperheroList from "./components/SuperheroList";
@@ -54,6 +55,7 @@ const App = () => {
         placeholder="Search for a hero"
       />
       <SuperheroList heroes={getFilteredHeroes()} />
+      <Footer />
     </div>
   );
 };
