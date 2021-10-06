@@ -6,6 +6,7 @@ const Work = ({ workDetails }) => {
         <table className="sub-details">
             <TableHeading heading="Work" />
             <Row heading="Occupation" description={workDetails.occupation} />
+            <Row heading="Base" description={workDetails.base} />
         </table>
     )
 }
