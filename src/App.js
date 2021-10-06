@@ -29,14 +29,25 @@ const App = () => {
   };
 
   const getFilteredHeroes = () => {
-    if (!searchTerm.trim()) return heroes;
+    //no search term, return all heroes
+    if (!searchTerm.trim()) {
+      return heroes;
+    }
 
+    const lowerCaseSearchTerm = searchTerm.trim().toLowerCase();
+    //searching by good or evil
+    if (lowerCaseSearchTerm === "bad" || lowerCaseSearchTerm === "good") {
+      return heroes.filter((hero) => {
+        return hero.biography.alignment === lowerCaseSearchTerm;
+      });
+    }
+
+    //searching by name
     return heroes.filter((hero) => {
       const lowerCaseName = hero.name.toLowerCase();
       const lowerCaseFullName = hero.biography.fullName
         ? hero.biography.fullName.toLowerCase()
         : "";
-      const lowerCaseSearchTerm = searchTerm.trim().toLowerCase();
 
       return (
         lowerCaseName.includes(lowerCaseSearchTerm) ||
