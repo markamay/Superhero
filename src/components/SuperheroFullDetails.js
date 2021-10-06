@@ -5,30 +5,19 @@ import Work from "./details/Work"
 
 const SuperheroFullDetails = ({ hero }) => {
     return (
-        <div>
-            <table className="full-details">
-                <tr>
-                    <th>{hero.name}</th>
-                </tr>
-                <tr>
-                    <td>
-                        <img src={hero.images.sm} alt={`${hero.name} avatar`} />
-                    </td>
-                </tr>
-                <tr>
-                    <Biography biography={hero.biography} />
-                </tr>
-                <tr>
-                    <Appearance appearance={hero.appearance} />
-                </tr>
-                <tr>
-                    <Powerstats powerstats={hero.powerstats} />
-                </tr>
-                <tr>
-                    <Work workDetails={hero.work} />
-                </tr>
-            </table>
-            
+        <div className="full-details">
+            <h2>{hero.name}</h2>
+
+            <img src={hero.images.sm} alt={`${hero.name} avatar`} />
+
+            <Biography biography={hero.biography} />
+
+            <Appearance appearance={hero.appearance} />
+
+            <Powerstats powerstats={hero.powerstats} />
+
+            <Work workDetails={hero.work} />
+
         </div>
     )
 }

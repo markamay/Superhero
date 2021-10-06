@@ -1,6 +1,6 @@
 const SuperheroSmallDetails = ({ hero }) => {
     return (
-        <div>
+        <div className="small-details">
             <img src={hero.images.xs} alt={`${hero.name} thumbnail`}/>
                 <h3>{hero.name}</h3>
                 <p class="sub-title">

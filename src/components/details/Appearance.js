@@ -3,7 +3,7 @@ import TableHeading from "./TableHeading"
 
 const Appearance = ({ appearance }) => {
     return (
-        <table className="full-details">
+        <table className="sub-details">
             <TableHeading heading="Appearance" />
             <Row heading="Gender" description={appearance.gender} />
             <Row heading="Race" description={appearance.race} />

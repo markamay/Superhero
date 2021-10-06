@@ -5,7 +5,7 @@ import TableHeading from './TableHeading'
 const Biography = ({ biography }) => {
     const aliases = biography.aliases.join(", ")
     return (
-        <table class="full-details">
+        <table class="sub-details">
             <TableHeading heading="Biography" />
             <Row heading="Full Name" description={biography.fullName} />
             <Row heading="Alter Egos" description={biography.alterEgos} />

@@ -2,7 +2,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  /*border: 1px dotted green;*/
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -15,7 +14,7 @@ body {
 }
 
 .container {
-  max-width: 500px;
+  max-width: 750px;
   margin: 30px auto;
   overflow: auto;
   min-height: 300px;
@@ -25,10 +24,8 @@ body {
 }
 
 .container h1 {
-  display: flex;
-  justify-content: space-between;
-  width: 50%;
   margin: 0 auto;
+  text-align: center;
 }
 
 .header {
@@ -45,6 +42,13 @@ body {
   font-size: 1em;
 }
 
+.superhero-card-border {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
 .superhero-card {
   background-color: white;
   margin-top: 10px;
@@ -54,11 +58,26 @@ body {
   border: 1px solid black;
 }
 
-.superhero-card-border {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border: 2px solid black;
-  border-radius: 5px;
+.small-details {
+  height: 3.25em;
+}
+
+.small-details h2{
+  display: inline;
+}
+
+.small-details img {
+  float: left;
+  margin-right: 1.5em;
+}
+
+.full-details img {
+  margin: 0 auto;
+  display: block;
+}
+
+.full-details h2 {
+  text-align: center;
 }
 
 .sub-title {

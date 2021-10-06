@@ -8,7 +8,6 @@ const SuperheroCard = ({ hero }) => {
         setShowFullDetails(!showFullDetails)
     }
 
-
     const hero_alignment = hero.biography.alignment;
     let alignment_color;
     if (hero_alignment === 'good') {
