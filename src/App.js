@@ -8,6 +8,9 @@ import SuperheroList from "./components/SuperheroList";
 const App = () => {
   const [heroes, setHeroes] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const [heroFilterFunction, setHeroFilterFunction] = useState(() => (hero) => {
+    return hero;
+  });
 
   useEffect(() => {
     const getHeroes = async () => {
@@ -31,37 +34,36 @@ const App = () => {
 
   //determines which heroes are displayed
   const getFilteredHeroes = () => {
-    //no search term, return all heroes
+    //no search term, return all heroes that match the filter function
     if (!searchTerm.trim()) {
-      return heroes;
+      return heroes.filter(heroFilterFunction);
     }
 
-    const lowerCaseSearchTerm = searchTerm.trim().toLowerCase();
-    //searching by good or evil
-    if (lowerCaseSearchTerm === "bad" || lowerCaseSearchTerm === "good") {
-      return heroes.filter((hero) => {
-        return hero.biography.alignment === lowerCaseSearchTerm;
-      });
-    }
+    //searching by name and filter function
+    return heroes
+      .filter((hero) => {
+        const lowerCaseSearchTerm = searchTerm.trim().toLowerCase();
+        const lowerCaseName = hero.name.toLowerCase();
+        const lowerCaseFullName = hero.biography.fullName
+          ? hero.biography.fullName.toLowerCase()
+          : "";
 
-    //searching by name
-    return heroes.filter((hero) => {
-      const lowerCaseName = hero.name.toLowerCase();
-      const lowerCaseFullName = hero.biography.fullName
-        ? hero.biography.fullName.toLowerCase()
-        : "";
-
-      return (
-        lowerCaseName.includes(lowerCaseSearchTerm) ||
-        lowerCaseFullName.includes(lowerCaseSearchTerm)
-      );
-    });
+        return (
+          lowerCaseName.includes(lowerCaseSearchTerm) ||
+          lowerCaseFullName.includes(lowerCaseSearchTerm)
+        );
+      })
+      .filter(heroFilterFunction);
   };
 
   return (
     <div className="container main-content">
       <Header />
-      <Filter modifySearchTerm={modifySearchTerm} searchTerm={searchTerm} />
+      <Filter
+        modifySearchTerm={modifySearchTerm}
+        searchTerm={searchTerm}
+        setHeroFilterFunction={setHeroFilterFunction}
+      />
       <SuperheroList heroes={getFilteredHeroes()} />
       <Footer />
     </div>
